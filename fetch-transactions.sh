@@ -57,7 +57,7 @@ if ! $ISLOGGEDIN; then
 
 fi
 
-if [ $1 == "loginonly" ]; then
+if [ "$1" = "loginonly" ]; then
   echo "Login only flag detected. Exiting."
   exit 0
 fi

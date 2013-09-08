@@ -9,9 +9,9 @@ fi
 
 function runQuery {
   echo "Running report '$1'..."
-  echo "<p><h3>$1</h3><pre style='font-size:14px;'>" >> $REPORTFILE
-  mysql -u $MYSQLUSER -p$MYSQLPASS $MYSQLDB -t -e "$2" >> $REPORTFILE
-  echo "</p></pre>" >> $REPORTFILE
+  echo "<p><h3>$1</h3>" >> $REPORTFILE
+  mysql -u $MYSQLUSER -p$MYSQLPASS $MYSQLDB -H -e "$2" >> $REPORTFILE
+  echo "</p>" >> $REPORTFILE
 }
 
 function sendEmail {
