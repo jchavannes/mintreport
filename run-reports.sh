@@ -16,7 +16,7 @@ function runQuery {
 
 function sendEmail {
   echo "Sending email to $REPORTEMAIL..."
-  mail -a "Content-Type: text/html" -s "Daily Report" "$REPORTEMAIL" < $REPORTFILE
+  mail -a "Content-Type: text/html" -s "Daily Report - $(date +"%Y-%m-%d")" "$REPORTEMAIL" < $REPORTFILE
 }
 
 runQuery "Transactions from last 7 days" '
