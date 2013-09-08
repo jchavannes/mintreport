@@ -6,6 +6,7 @@ MYSQLUSER="root"
 MYSQLPASS="root"
 MYSQLDB="dbname"
 MYSQLTBL="transactions"
+REPORTEMAIL="name@email.com"
 
 LOCALCONFIG="config.local.sh"
 if [ -f $LOCALCONFIG ]; then
