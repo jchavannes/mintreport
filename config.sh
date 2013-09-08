@@ -10,7 +10,6 @@ REPORTEMAIL="name@email.com"
 
 LOCALCONFIG="config.local.sh"
 if [ -f $LOCALCONFIG ]; then
-  echo "Using local config file."
   source $LOCALCONFIG
 else
   echo "File not found: '$LOCALCONFIG'"

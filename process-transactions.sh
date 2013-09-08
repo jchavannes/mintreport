@@ -7,9 +7,9 @@ if [ -z $CSVDIR ]; then
 fi
 
 FILE=`ls -t $CSVDIR/ | head -n 1`
-echo "CSV file: '$CSVDIR/$FILE'."
+echo "Using CSV file: '$CSVDIR/$FILE'."
 
-echo "MySQL table: $MYSQLTBL"
+echo "Using MySQL table: $MYSQLTBL"
 TMPCSV="/tmp/$MYSQLTBL.csv"
 
 echo "Copying to temp file: '$TMPCSV'..."
