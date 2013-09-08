@@ -1,4 +1,5 @@
 #!/bin/bash
+cd "$(dirname "$0")"
 REPORTFILE="/tmp/reportfile.txt"
 source config.sh
 

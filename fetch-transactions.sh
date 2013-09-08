@@ -1,4 +1,5 @@
 #!/bin/bash
+cd "$(dirname "$0")"
 COOKIEFILE="/tmp/cookie-mint.txt"
 USEOLDCOOKIE=true
 
@@ -57,6 +58,7 @@ if ! $ISLOGGEDIN; then
 fi
 
 if [ $1 == "loginonly" ]; then
+  echo "Login only flag detected. Exiting."
   exit 0
 fi
 
