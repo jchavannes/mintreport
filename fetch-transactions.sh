@@ -56,6 +56,10 @@ if ! $ISLOGGEDIN; then
 
 fi
 
+if [ $1 == "loginonly" ]; then
+  exit 0
+fi
+
 echo "Fetching transactions..."
 URL="https://wwws.mint.com/transactionDownload.event"
 curl -b $COOKIEFILE -c $COOKIEFILE $URL 2>/dev/null > $CSVFILE
